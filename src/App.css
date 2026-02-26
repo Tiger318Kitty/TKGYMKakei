@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+header {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+}
+
+.summary-item {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-item span {
+    display: block;
+}
+
+.summary-item span:first-child {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.summary-item span:last-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.summary-item.income {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.summary-item.expense {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.summary-item.balance {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.input-form {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.type-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.type-selector button {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.type-selector button.active {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:active {
+    background: #45a049;
+}
+
+.transactions {
+    margin: 1rem;
+}
+
+.transactions h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.transactions ul {
+    list-style: none;
+}
+
+.transaction {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-header {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.category {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.memo {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.transaction-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.transaction-amount span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.transaction-amount span.income {
+    color: #2e7d32;
+}
+
+.transaction-amount span.expense {
+    color: #c62828;
+}
+
+.delete-btn {
+    padding: 0.4rem 0.8rem;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+}
+
+@media (max-width: 600px) {
+    .app {
+        padding-bottom: 1rem;
+    }
+
+    .input-form {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .transactions {
+        margin: 0.5rem;
+    }
+}
