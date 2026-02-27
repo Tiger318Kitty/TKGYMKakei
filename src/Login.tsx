@@ -12,7 +12,7 @@ function Login({ onLogin }: LoginProps) {
     // パスワードのハッシュ値（SHA-256）
     // 実際のパスワード: "your-password-here"
     // 変更する場合: https://emn178.github.io/online-tools/sha256.html でハッシュ化
-    const PASSWORD_HASH = '7951237e54c5ec3dc685de870c3f7c16a6ed2b256940052c2c1d0cf461a55ead'
+    const PASSWORD_HASH = '0651ee70db05737d7195776455175f3f4dbd4755e13e9f87d905a63817e979b8'
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
