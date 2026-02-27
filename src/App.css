@@ -37,7 +37,8 @@ header h1 {
 }
 
 .stats-btn,
-.settings-btn {
+.settings-btn,
+.logout-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;

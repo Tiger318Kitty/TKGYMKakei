@@ -321,6 +321,16 @@ function App() {
                     <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>
                         ⚙️
                     </button>
+                    <button
+                        className="logout-btn"
+                        onClick={() => {
+                            localStorage.removeItem('authenticated')
+                            localStorage.removeItem('authTime')
+                            window.location.reload()
+                        }}
+                    >
+                        🚪
+                    </button>
                 </div>
             </header>
 

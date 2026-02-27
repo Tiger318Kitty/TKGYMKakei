@@ -164,7 +164,16 @@ function Statistics() {
                     ← 戻る
                 </button>
                 <h1>📊 年間統計</h1>
-                <div style={{ width: '40px' }} />
+                <button
+                    className="logout-btn"
+                    onClick={() => {
+                        localStorage.removeItem('authenticated')
+                        localStorage.removeItem('authTime')
+                        window.location.reload()
+                    }}
+                >
+                    🚪
+                </button>
             </header>
 
             <div className="year-selector">
