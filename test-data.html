@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ローカルストレージ確認</title>
+</head>
+
+<body>
+    <h1>ローカルストレージデータ確認</h1>
+    <button onclick="checkData()">データを確認</button>
+    <button onclick="clearData()">データをクリア</button>
+    <pre id="output"></pre>
+
+    <script>
+        function checkData() {
+            const transactions = localStorage.getItem('transactions');
+            const settings = localStorage.getItem('settings');
+
+            const output = document.getElementById('output');
+            output.textContent = 'Transactions:\n' +
+                JSON.stringify(JSON.parse(transactions || '[]'), null, 2) +
+                '\n\nSettings:\n' +
+                JSON.stringify(JSON.parse(settings || '{}'), null, 2);
+        }
+
+        function clearData() {
+            if (confirm('本当にすべてのデータを削除しますか？')) {
+                localStorage.clear();
+                alert('データを削除しました');
+                document.getElementById('output').textContent = '';
+            }
+        }
+
+        // ページ読み込み時に自動表示
+        window.onload = checkData;
+    </script>
+</body>
+
+</html>
